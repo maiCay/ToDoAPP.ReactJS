@@ -17,12 +17,14 @@ export const TaskItem = ({handleComplete, handleDelete, task}) => {
 
 
   return (
-    <div>
+    <div id="tasks-container">
         <span style={ {textDecoration: isCompleted ? 'line-through' : 'none'}}>
             {task.name}
+        </span>
+        <section>
             <button onClick={toggleComplete} class="button-icon"><FaRegCheckSquare /></button>
             <button onClick={onDelete} class="button-icon" ><RiDeleteBinLine /></button>
-        </span>
+        </section>
     </div>
   )
 }
